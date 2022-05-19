@@ -1,6 +1,13 @@
 # Magtitude Response
 > Trần Công Minh 
+### Đề bài
+- [MagnitudeResponse.pdf](./MagnitudeResponse.pdf)
 - Vẽ đáp ứng biên độ theo 3 cách
+	- Theo điểm không và điểm cực
+	- Theo Công thức $H(e^{j\omega})$
+	- Dùng hàm `scipy.signal.freqz(b,a)`
+### Bài làm
+[Python File](./MR.py)
 
 ```python
 # Magtitude Response
