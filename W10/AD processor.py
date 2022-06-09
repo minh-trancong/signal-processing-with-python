@@ -20,15 +20,23 @@ X = np.fft.fft(x, N)
 X.resize(512)
 w = np.linspace(0,np.pi,512)
 axs[1].plot(w,abs(X))
+axs[1].set_title('Magnitude Spectrum of Input Signal')
 
 b = [1,1,1]
 a = [3,0,0]
 w, H = freqz(b,a)
 f = w/(2*np.pi)
 axs[2].plot(w,abs(H))
+axs[2].set_title('Magnitude Response of Filter')
 
 y = signal.lfilter(b, a, x)
 axs[3].plot(t,y)
+# axs[3].set_ylim(3.1,5)
+axs[3].set_title('Output signal')
 
-
+Y = np.fft.fft(y, N)
+Y.resize(512)
+w = np.linspace(0,np.pi,512)
+axs[4].plot(w,abs(Y))
+axs[4].set_title('Magnitude Spectrum of Output Signal')
 plt.show()
